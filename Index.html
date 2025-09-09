@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LAIK</title>
+   <!-- Favicon -->
+  <link rel="icon" type="Images/favicon.jpeg" href="Images/LOGOnobg.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth; /* enables smooth scrolling */
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Navbar (transparent) -->
+  <header class="bg-black bg-opacity-70 backdrop-blur-md shadow-md z-50 fixed w-full">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="Images/LOGOnobg.png" alt="LAIK Logo" class="h-[140px] w-auto" onerror="this.style.display='none'">
+      </div>
+      <!-- Menu -->
+      <nav class="space-x-6 text-white">
+        <a href="#generic" class="hover:text-gray-400">Home</a>
+        <a href="#about" class="hover:text-gray-400">About Us</a>
+        <a href="#services" class="hover:text-gray-400">Services</a>
+        <a href="#team" class="hover:text-gray-400">Our Team</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with Background Image -->
+  <section id="generic" class="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center relative pt-[160px]" style="background-image: url('Images/mainBG.webp');">
+    <!-- Dark overlay for readability -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10">
+      <h2 class="text-5xl font-bold mb-4 text-white">Welcome to LAIK</h2>
+      <p class="text-lg text-gray-300">Let Your Data Work For You.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 px-6 max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-6">About Us</h2>
+    <p class="text-gray-400 leading-relaxed">
+      At LAIK, we are a data analytics and strategy business committed to helping organizations make smarter, evidence-based decisions. We specialize in gathering and analyzing data to uncover patterns, forecast outcomes, and provide actionable insights that strengthen strategic planning.
+    </p>
+    <p class="text-gray-400 leading-relaxed mb-4">
+        
+    </p>
+    <p class="text-gray-400 leading-relaxed">
+        Our approach blends advanced analytical tools and forecasting models with practical business understanding. This allows us to turn complex information into clear, results-oriented strategies. At LAIK, we see ourselves not only as data experts but also as strategic partners—working alongside our clients to improve efficiency, guide growth, and create long-term value.
+    </p>
+</section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-white text-black text-center">
+    <h2 class="text-3xl font-semibold mb-6">Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="p-6 border rounded-xl shadow">
+        <h3 class="text-xl font-bold mb-3">Data Analytics & Visualization</h3>
+        <p class="text-gray-700">Turning raw data into clear dashboards, charts, and actionable insights so businesses can see trends and make informed decisions</p>
+      </div>
+      <div class="p-6 border rounded-xl shadow">
+        <h3 class="text-xl font-bold mb-3">Forecasting & Demand Planning</h3>
+        <p class="text-gray-700">Using predictive models and statistical tools to forecast sales, customer behavior, or operational needs, helping clients plan ahead and reduce risk.</p>
+      </div>
+      <div class="p-6 border rounded-xl shadow">
+        <h3 class="text-xl font-bold mb-3">Business Strategy & Consulting</h3>
+        <p class="text-gray-700">Advising clients on growth strategies, market positioning, and process optimization, bridging the gap between data insights and practical business actions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="py-20 px-6 max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-6">Our Team</h2>
+
+    <div id="team-grid" class="grid gap-8">
+      <!-- Team Member -->
+      <div class="p-4 border rounded-xl w-full max-w-xs">
+        <div class="w-30 h-30 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="Images/KarlNM.jpg" alt="Karl Lopes" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold">Karl Lopes</h3>
+        <p class="text-gray-400">Managing Director</p>
+      </div>
+      <!-- Add more team members here -->
+    </div>
+  </section>
+
+  <script>
+    const grid = document.getElementById('team-grid');
+    const members = grid.children.length;
+
+    if (members === 1) {
+      // 1 member → center with flex
+      grid.className = 'flex justify-center gap-8';
+    } else if (members === 2) {
+      // 2 members → center evenly
+      grid.className = 'grid grid-cols-2 justify-items-center gap-8';
+    } else {
+      // 3 or more → standard 3-column grid
+      grid.className = 'grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center';
+    }
+  </script>
+
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-500 py-6 text-center">
+    <p>&copy; 2025 LAIK. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
